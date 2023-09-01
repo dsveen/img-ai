@@ -5,7 +5,7 @@ import axios from "axios";
 import Image from "next/image";
 import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Download, ImageIcon } from "lucide-react";
+import { Download, ImageIcon, GalleryHorizontalEndIcon } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
@@ -21,6 +21,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useProModal } from "@/hooks/use-pro-modal";
 
 import { amountOptions, formSchema, resolutionOptions } from "./constants";
+import { getUserGenerations } from "@/lib/generations";
 
 const PhotoPage = () => {
   const proModal = useProModal();
@@ -36,16 +37,20 @@ const PhotoPage = () => {
     }
   });
 
+  // const apiLimitCount = getUserGenerations();
+  // console.log("TEST");
+  // console.log(apiLimitCount.map());
+  // const urls = apiLimitCount.map((image: { url: string }) => image.url);
+
   const isLoading = form.formState.isSubmitting;
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       setPhotos([]);
 
-      const response = await axios.post('/api/image', values);
-      console.log(response);
-      const urls = response.data.map((image: { url: string }) => image.url);
-      console.log(urls);
+      const response = await axios.post('/api/headshot', values);
+      const urls = response.data;
+
       setPhotos(urls);
     } catch (error: any) {
       if (error?.response?.status === 403) {
@@ -61,7 +66,7 @@ const PhotoPage = () => {
   return ( 
     <div>
       <Heading
-        title="Image Generation"
+        title="Replicate"
         description="Turn your prompt into an image."
         icon={ImageIcon}
         iconColor="text-pink-700"
@@ -191,6 +196,16 @@ const PhotoPage = () => {
             </Card>
           ))}
         </div>
+      </div>
+      <div className="">
+      <Heading
+        title="History"
+        description="Turn your prompt into an image."
+        icon={GalleryHorizontalEndIcon}
+        iconColor="text-blue-700"
+        bgColor="bg-blue-700/10"
+      />
+
       </div>
     </div>
    );

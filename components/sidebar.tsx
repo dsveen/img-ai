@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Montserrat } from 'next/font/google'
-import { Code, ImageIcon, LayoutDashboard, MessageSquare, Music, Settings, VideoIcon } from "lucide-react";
+import { Code, ImageIcon, LayoutDashboard, MessageSquare, Music, Settings, VideoIcon, Upload } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
@@ -31,6 +31,12 @@ const routes = [
     href: '/image',
   },
   {
+    label: 'Replicate',
+    icon: ImageIcon,
+    color: "text-pink-700",
+    href: '/replicate',
+  },
+  {
     label: 'Video Generation',
     icon: VideoIcon,
     color: "text-orange-700",
@@ -47,6 +53,12 @@ const routes = [
     icon: Code,
     color: "text-green-700",
     href: '/code',
+  },
+  {
+    label: 'Uploads',
+    icon: Upload,
+    color: "text-blue-700",
+    href: '/upload',
   },
   {
     label: 'Settings',
@@ -72,7 +84,7 @@ export const Sidebar = ({
             <Image fill alt="Logo" src="/logo.png" />
           </div>
           <h1 className={cn("text-2xl font-bold", poppins.className)}>
-            Genius
+            ImgFix
           </h1>
         </Link>
         <div className="space-y-1">
