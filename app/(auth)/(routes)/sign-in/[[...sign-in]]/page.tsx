@@ -67,7 +67,7 @@ export default function Page() {
                     </div>
                 </div>
                 <div className="w-full text-center">
-                    <p className="text-gray-500 leading-6 text-base">Don't have an account? <a href="/sign-up" className="text-primary font-semibold ms-1">Sign Up</a></p>
+                    <p className="text-gray-500 leading-6 text-base">Don&apos;t have an account? <a href="/sign-up" className="text-primary font-semibold ms-1">Sign Up</a></p>
                 </div>
             </div>
         </div>

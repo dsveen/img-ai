@@ -69,7 +69,7 @@ export const LandingContent = () => {
                                 </button>
                                 <div className="w-full overflow-hidden duration-300 ps-16">
                                     <p className="text-gray-700 dark:text-gray-300">
-                                        Before we dive into why companies must invest in employee experience (EX), it’s important to understand what this concept entails.
+                                        Before we dive into why companies must invest in employee experience (EX), it&apos;s important to understand what this concept entails.
                                     </p>
                                     <div className="mt-7 flex items-center">
                                         <a href="#" className="text-primary">Learn more <i className="fa-solid fa-arrow-right ms-2"></i></a>
@@ -143,7 +143,7 @@ export const LandingContent = () => {
                                 </svg>
                             </div>
 
-                            <h1 className="text-3xl/tight font-medium mt-6 mb-4">Smart Payroll. Paying your people couldn't be easier</h1>
+                            <h1 className="text-3xl/tight font-medium mt-6 mb-4">Smart Payroll. Paying your people couldn&apos;t be easier</h1>
                             <p className="text-gray-500">You can modify your pages with drag-dropping , can import demos with just ” One Click” and can modify theme setting easy-to-use options panel.</p>
                             <div className="flex items-center mt-12">
                                 <a href="#" className="text-primary">Learn more <i className="fa-solid fa-arrow-right ms-2"></i> </a>
@@ -249,7 +249,7 @@ export const LandingContent = () => {
                     </button>
                     <div className="hidden w-full overflow-hidden transition-[height] duration-300">
                         <p className="text-gray-700 dark:text-gray-300 pt-3 p-5">
-                            No. This is a HTML template. It won't directly with WordPress, though you can convert this into WordPress compatible theme.
+                            No. This is a HTML template. It won&apos;t directly with WordPress, though you can convert this into WordPress compatible theme.
                         </p>
                     </div>
                 </div>
