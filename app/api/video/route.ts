@@ -5,13 +5,16 @@ import { NextResponse } from "next/server";
 import { incrementApiLimit, checkApiLimit } from "@/lib/api-limit";
 import { checkSubscription } from "@/lib/subscription";
 
-const replicate = new Replicate({
-  auth: process.env.REPLICATE_API_TOKEN!,
-});
 
 export async function POST(
   req: Request
 ) {
+
+  const replicate = new Replicate({
+    auth: process.env.REPLICATE_API_TOKEN!,
+  });
+  
+
   try {
     const { userId } = auth();
     const body = await req.json();

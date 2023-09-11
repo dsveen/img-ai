@@ -5,14 +5,17 @@ import { OpenAI } from "openai";
 import { checkSubscription } from "@/lib/subscription";
 import { incrementApiLimit, checkApiLimit } from "@/lib/api-limit";
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
 
 
 export async function POST(
   req: Request
 ) {
+
+
+  const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+  });
+
   try {
     const { userId } = auth();
     const body = await req.json();

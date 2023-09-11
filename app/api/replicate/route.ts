@@ -6,17 +6,14 @@ import { incrementApiLimit, checkApiLimit } from "@/lib/api-limit";
 import { checkSubscription } from "@/lib/subscription";
 import prismadb from "@/lib/prismadb";
 
-const replicate = new Replicate({
-  auth: process.env.REPLICATE_API_TOKEN!,
-});
-
-function randomInteger(min: number, max: number) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
 export async function POST(
   req: Request
 ) {
+
+  const replicate = new Replicate({
+    auth: process.env.REPLICATE_API_TOKEN!,
+  });
+
   try {
     const { userId } = auth();
     const body = await req.json();
@@ -89,3 +86,7 @@ export async function POST(
     return new NextResponse("Internal Error", { status: 500 });
   }
 };
+
+function randomInteger(min: number, max: number) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
