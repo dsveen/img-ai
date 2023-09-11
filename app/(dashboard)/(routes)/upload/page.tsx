@@ -29,7 +29,7 @@ const UploadPage = async () => {
   return ( 
     <div>
       <Heading
-        title="Settings"
+        title="Upload"
         description="Manage account settings."
         icon={Settings}
         iconColor="text-gray-700"
@@ -42,7 +42,7 @@ const UploadPage = async () => {
                   options={uploaderOptions}
                   onUpdate={files => console.log(files.map(x => x.fileUrl).join("\n"))}
                   onComplete={files => alert(files.map(x => x.fileUrl).join("\n"))}
-                  width="600px"
+                  width="100%"
                   height="375px" />
       </div>
     </div>
