@@ -67,7 +67,7 @@ export const LandingNavbar = () => {
                     </li>
 
                     <li className="nav-item">
-                        <a href="javascript:void(0)" data-fc-type="collapse" className="nav-link">
+                        <a href="#" data-fc-type="collapse" className="nav-link">
                             Landing <i className="fa-solid fa-angle-down ms-auto align-middle transition-all fc-collapse-open:rotate-180"></i>
                         </a>
 
@@ -116,7 +116,7 @@ export const LandingNavbar = () => {
                     </li>
 
                     <li className="nav-item">
-                        <a href="javascript:void(0)" data-fc-type="collapse" className="nav-link">
+                        <a href="#" data-fc-type="collapse" className="nav-link">
                             Pages <i className="fa-solid fa-angle-down ms-auto align-middle transition-all fc-collapse-open:rotate-180"></i>
                         </a>
 
