@@ -10,6 +10,13 @@ const replicate = new Replicate({
   auth: process.env.REPLICATE_API_TOKEN!,
 });
 
+export async function getStaticProps() {
+
+  return {
+    props: {},
+  }
+}
+
 export async function POST(
   req: Request
 ) {
